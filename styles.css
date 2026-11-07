@@ -146,7 +146,7 @@ h1 em, h2 em { color: var(--gold); font-weight: 500; }
 .closing-cta h2 em { color: #ebc18c; }
 
 
-.site-footer { min-height: 135px; padding: 30px clamp(24px, 6vw, 92px); display: grid; grid-template-columns: auto 1fr auto; align-items: center; gap: 25px; background: var(--ink); color: var(--cream); }
+.site-footer { min-height: 135px; padding: 30px clamp(24px, 6vw, 92px); display: grid; grid-template-columns: auto 1fr auto auto; align-items: center; gap: 25px; background: var(--ink); color: var(--cream); }
 .site-footer > p { margin: 0; color: #a59f96; font-size: 10px; text-align: center; }
 .footer-book { color: var(--gold); font-size: 10px; font-weight: 700; letter-spacing: .08em; text-transform: uppercase; }
 .copyright { grid-column: 1 / -1; padding-top: 15px; border-top: 1px solid var(--line); color: #817b73; font-size: 9px; }
@@ -322,3 +322,7 @@ h1 em, h2 em { color: var(--gold); font-weight: 500; }
 }
 
 .barber-photo-placeholder { display: grid; place-items: center; color: var(--cream); background: var(--ink); font-family: var(--serif); font-size: clamp(72px, 8vw, 112px); font-style: italic; }
+
+.footer-instagram { display: inline-flex; align-items: center; gap: 7px; color: var(--cream); font-size: 10px; font-weight: 700; letter-spacing: .08em; text-transform: uppercase; transition: color .2s ease; }
+.footer-instagram:hover { color: var(--gold); }
+.footer-instagram span { font-size: 14px; }
