@@ -5,8 +5,8 @@
   --paper: #fbf9f4;
   --muted: #aaa49a;
   --line: rgba(244, 240, 232, .16);
-  --red: #9e2b27;
-  --red-bright: #b63831;
+  --red: #087f87;
+  --red-bright: #0ba3ad;
   --gold: #c9a96a;
   --booksy: #0ba3ad;
   --booksy-hover: #087f87;
@@ -27,6 +27,8 @@ button { font: inherit; }
 .brand { display: inline-flex; align-items: center; gap: 11px; min-width: max-content; }
 .brand-mark { color: var(--gold); width: 38px; height: 38px; display: grid; place-items: center; }
 .brand-mark svg { width: 100%; height: 100%; }
+.brand-mark-logo { width: 42px; height: 42px; }
+.shop-skull-logo { width: 100%; height: 100%; object-fit: contain; }
 .brand-type { display: flex; flex-direction: column; line-height: 1; letter-spacing: .16em; }
 .brand-type strong { font-size: 15px; font-weight: 700; }
 .brand-type small { margin-top: 6px; color: var(--muted); font-size: 8px; letter-spacing: .24em; }
