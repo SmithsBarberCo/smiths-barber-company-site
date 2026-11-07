@@ -8,6 +8,8 @@
   --red: #9e2b27;
   --red-bright: #b63831;
   --gold: #c9a96a;
+  --booksy: #0ba3ad;
+  --booksy-hover: #087f87;
   --serif: "Playfair Display", Georgia, serif;
   --sans: "DM Sans", Arial, sans-serif;
 }
@@ -231,6 +233,20 @@ h1 em, h2 em { color: var(--gold); font-weight: 500; }
   .footer-book { font-size: 9px; }
   .copyright { flex-basis: 100%; order: 4; }
 }
+.booksy-logo { width: 19px; height: 19px; flex: 0 0 auto; object-fit: contain; }
+.button-booksy { background: var(--booksy); border-color: var(--booksy); color: #fff; }
+.button-booksy:hover { background: var(--booksy-hover); border-color: var(--booksy-hover); color: #fff; }
+.text-link-booksy { color: var(--booksy); border-color: var(--booksy); }
+.text-link-booksy:hover { color: var(--booksy-hover); border-color: var(--booksy-hover); }
+.text-link-light.text-link-booksy { color: #23b8c0; border-color: rgba(35, 184, 192, .7); }
+.text-link-light.text-link-booksy:hover { color: #62d3d8; border-color: #62d3d8; }
+.round-arrow-booksy { background: var(--booksy); border-color: var(--booksy); }
+.round-arrow-booksy:hover { background: var(--booksy-hover); color: #fff; }
+.round-arrow-booksy .booksy-logo { width: 30px; height: 30px; }
+.footer-booksy { display: inline-flex; align-items: center; gap: 8px; color: var(--booksy); }
+.footer-booksy:hover { color: var(--booksy-hover); }
+.footer-booksy .booksy-logo { width: 17px; height: 17px; }
+
 @media (prefers-reduced-motion: reduce) {
   *, *::before, *::after { scroll-behavior: auto !important; transition-duration: .01ms !important; animation-duration: .01ms !important; }
 }
