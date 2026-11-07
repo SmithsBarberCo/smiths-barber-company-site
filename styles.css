@@ -252,3 +252,34 @@ h1 em, h2 em { color: var(--gold); font-weight: 500; }
 @media (prefers-reduced-motion: reduce) {
   *, *::before, *::after { scroll-behavior: auto !important; transition-duration: .01ms !important; animation-duration: .01ms !important; }
 }
+
+/* Booksy client reviews */
+.reviews { background: var(--paper); }
+.reviews .section-heading { align-items: end; }
+.reviews .section-heading .eyebrow { color: var(--ink); }
+.reviews .section-heading h2 em { color: var(--gold); }
+.reviews-intro { max-width: 350px; }
+.reviews-intro p { margin: 0 0 17px; color: #6b655e; font-size: 13px; line-height: 1.75; }
+.reviews-intro .text-link { font-size: 10px; }
+.review-grid { display: grid; grid-template-columns: repeat(5, minmax(0, 1fr)); border: 1px solid #d9d2c8; }
+.review-card { min-height: 220px; padding: 23px 20px; display: flex; flex-direction: column; background: var(--cream); }
+.review-card + .review-card { border-left: 1px solid #d9d2c8; }
+.review-stars { color: var(--gold); font-size: 13px; letter-spacing: .13em; }
+.review-card blockquote { margin: 25px 0 auto; font-family: var(--serif); font-size: clamp(17px, 1.6vw, 22px); line-height: 1.35; }
+.review-byline { display: flex; flex-direction: column; gap: 4px; margin: 24px 0 0; padding-top: 13px; border-top: 1px solid #d9d2c8; font-size: 10px; }
+.review-byline strong { color: var(--ink); font-size: 11px; }
+.review-byline span { color: #756f67; }
+@media (max-width: 900px) {
+  .review-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .review-card:nth-child(odd) { border-left: 0; }
+  .review-card:nth-child(n+3) { border-top: 1px solid #d9d2c8; }
+  .review-card blockquote { font-size: 21px; }
+}
+@media (max-width: 680px) {
+  .reviews .section-heading { gap: 24px; }
+  .reviews-intro { max-width: none; }
+  .review-grid { grid-template-columns: 1fr; }
+  .review-card { min-height: 180px; padding: 21px 23px; }
+  .review-card + .review-card { border-left: 0; border-top: 1px solid #d9d2c8; }
+  .review-card blockquote { font-size: 23px; }
+}
