@@ -360,3 +360,25 @@ h1 em, h2 em { color: var(--gold); font-weight: 500; }
 @media (max-width: 680px) {
   .product-copy p { font-size: 12px; }
 }
+
+
+/* Crazy Bull styling product cards */
+.products .section-heading { align-items: center; }
+.products .section-heading h2 em { color: var(--gold); }
+.product-copy { max-width: 430px; }
+.product-copy p { color: #6e675f; font-size: 13px; line-height: 1.8; margin: 0 0 15px; }
+.product-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 18px; }
+.product-card { overflow: hidden; border: 1px solid #ded8ce; background: #fff; }
+.product-photo { display: block; width: 100%; aspect-ratio: 1 / 1; object-fit: contain; background: #fff; }
+.product-card-copy { min-height: 108px; padding: 15px 16px 18px; border-top: 1px solid #eee9e2; }
+.product-card-copy h3 { margin: 0 0 7px; color: var(--ink); font-family: var(--serif); font-size: 19px; font-weight: 600; }
+.product-card-copy p { margin: 0; color: #6e675f; font-size: 11px; line-height: 1.6; }
+@media (max-width: 1050px) { .product-grid { grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 12px; } }
+@media (max-width: 680px) {
+  .product-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 10px; }
+  .product-copy p { font-size: 12px; }
+  .product-card-copy { min-height: 118px; padding: 12px 11px 14px; }
+  .product-card-copy h3 { font-size: 16px; }
+  .product-card-copy p { font-size: 10px; }
+}
+@media (max-width: 390px) { .product-grid { grid-template-columns: 1fr; } }
