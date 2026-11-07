@@ -233,8 +233,8 @@ h1 em, h2 em { color: var(--gold); font-weight: 500; }
   .footer-book { font-size: 9px; }
   .copyright { flex-basis: 100%; order: 4; }
 }
-.booksy-logo { width: 19px; height: 19px; flex: 0 0 auto; object-fit: contain; }
-.button-booksy { background: var(--booksy); border-color: var(--booksy); color: #fff; }
+.booksy-logo { width: 24px; height: 24px; flex: 0 0 auto; object-fit: contain; }
+.button-booksy { gap: 12px; background: var(--booksy); border-color: var(--booksy); color: #fff; }
 .button-booksy:hover { background: var(--booksy-hover); border-color: var(--booksy-hover); color: #fff; }
 .text-link-booksy { color: var(--booksy); border-color: var(--booksy); }
 .text-link-booksy:hover { color: var(--booksy-hover); border-color: var(--booksy-hover); }
