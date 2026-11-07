@@ -283,3 +283,40 @@ h1 em, h2 em { color: var(--gold); font-weight: 500; }
   .review-card + .review-card { border-left: 0; border-top: 1px solid #d9d2c8; }
   .review-card blockquote { font-size: 23px; }
 }
+
+/* Barber team profiles */
+.team { background: var(--cream); }
+.team .section-heading .eyebrow { color: var(--ink); }
+.team .section-heading > p { max-width: 380px; }
+.team .section-heading h2 em { color: var(--gold); }
+.team-grid { display: grid; grid-template-columns: repeat(5, minmax(0, 1fr)); gap: 14px; }
+.barber-card { min-width: 0; background: var(--paper); border: 1px solid #ded8ce; }
+.barber-photo { width: 100%; aspect-ratio: 1 / 1; object-fit: cover; object-position: center; filter: grayscale(1) contrast(1.06); background: #d8d3ca; }
+.barber-copy { padding: 18px 16px 20px; }
+.barber-copy h3 { min-height: 27px; margin: 0 0 9px; font-family: var(--serif); font-size: 20px; line-height: 1.25; }
+.barber-copy h3 span { display: block; margin-top: 4px; color: #777168; font-family: var(--sans); font-size: 9px; font-weight: 500; letter-spacing: .02em; }
+.barber-copy p { min-height: 82px; margin: 0 0 18px; color: #6b655e; font-size: 11px; line-height: 1.65; }
+.barber-copy .text-link { gap: 8px; font-size: 9px; }
+.shop-contact { margin: 20px 0 0 !important; padding-top: 14px; border-top: 1px solid #ded8ce; display: flex; flex-direction: column; gap: 6px; }
+.shop-contact span { color: #756f67; font-size: 8px; font-weight: 700; letter-spacing: .16em; }
+.shop-contact a, .footer-phone { font-weight: 700; }
+.shop-contact a { font-size: 14px; }
+.footer-phone { display: inline-block; margin-top: 6px; color: var(--cream); }
+@media (max-width: 1050px) {
+  .team-grid { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+  .barber-copy p { min-height: 60px; }
+}
+@media (max-width: 680px) {
+  .team-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 10px; }
+  .barber-copy { padding: 14px 12px 16px; }
+  .barber-copy h3 { font-size: 18px; }
+  .barber-copy h3 span { font-size: 8px; }
+  .barber-copy p { min-height: 118px; font-size: 10px; }
+  .barber-copy .text-link { font-size: 8px; }
+}
+@media (max-width: 390px) {
+  .team-grid { grid-template-columns: 1fr; }
+  .barber-card { display: grid; grid-template-columns: 38% 1fr; }
+  .barber-photo { height: 100%; min-height: 180px; }
+  .barber-copy p { min-height: auto; }
+}
