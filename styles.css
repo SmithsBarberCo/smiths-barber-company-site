@@ -106,9 +106,9 @@ h1 em, h2 em { color: var(--gold); font-weight: 500; }
 .price-note { margin: 15px 0 0; color: #827a70; font-size: 10px; line-height: 1.6; }
 
 .about { display: grid; grid-template-columns: 1fr 1fr; min-height: 580px; background: var(--ink); color: var(--cream); }
-.about-image { min-height: 580px; position: relative; overflow: hidden; }
+.about-image { min-height: 580px; position: relative; overflow: hidden; background: var(--ink); }
 .about-image::after { content: ""; position: absolute; inset: 0; background: linear-gradient(0deg, rgba(15, 14, 13, .62), transparent 50%); }
-.about-image img { width: 100%; height: 100%; position: absolute; inset: 0; object-fit: cover; filter: saturate(.75); }
+.about-image img { width: 100%; height: 100%; position: absolute; inset: 0; object-fit: contain; object-position: center; filter: saturate(.75); }
 .image-label { position: absolute; z-index: 1; bottom: 34px; left: clamp(24px, 6vw, 84px); color: white; font-size: 9px; font-weight: 700; letter-spacing: .2em; }
 .about-copy { padding: 90px clamp(32px, 8vw, 120px) 72px clamp(42px, 7vw, 106px); align-self: center; }
 .about-copy h2 { margin-bottom: 24px; font-size: clamp(43px, 4.7vw, 66px); line-height: 1.05; }
@@ -240,8 +240,8 @@ h1 em, h2 em { color: var(--gold); font-weight: 500; }
 .button-booksy:hover { background: var(--booksy-hover); border-color: var(--booksy-hover); color: #fff; }
 .text-link-booksy { color: var(--booksy); border-color: var(--booksy); }
 .text-link-booksy:hover { color: var(--booksy-hover); border-color: var(--booksy-hover); }
-.text-link-light.text-link-booksy { color: #23b8c0; border-color: rgba(35, 184, 192, .7); }
-.text-link-light.text-link-booksy:hover { color: #62d3d8; border-color: #62d3d8; }
+.text-link-light.text-link-booksy { color: #fff; border-color: #fff; }
+.text-link-light.text-link-booksy:hover { color: #fff; border-color: #fff; }
 .round-arrow-booksy { background: var(--booksy); border-color: var(--booksy); }
 .round-arrow-booksy:hover { background: var(--booksy-hover); color: #fff; }
 .round-arrow-booksy .booksy-logo { width: 30px; height: 30px; }
