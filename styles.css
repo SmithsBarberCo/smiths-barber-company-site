@@ -326,3 +326,24 @@ h1 em, h2 em { color: var(--gold); font-weight: 500; }
 .footer-instagram { display: inline-flex; align-items: center; gap: 9px; color: var(--cream); font-size: 10px; font-weight: 700; letter-spacing: .06em; text-transform: uppercase; transition: color .2s ease, transform .2s ease; }
 .footer-instagram:hover { color: var(--gold); transform: translateY(-2px); }
 .instagram-icon { width: 30px; height: 30px; flex: 0 0 auto; object-fit: contain; }
+
+
+/* Service menu, full Booksy listing */
+.service-card > strong small { display: block; margin-top: 5px; color: #756f67; font-size: 9px; font-weight: 500; text-align: right; }
+.service-link-card { grid-template-columns: 1fr auto; }
+
+/* Frequently asked questions */
+.faq { background: #f4f0e9; }
+.faq-list { border-top: 1px solid #d9d2c8; }
+.faq-list details { border-bottom: 1px solid #d9d2c8; }
+.faq-list summary { position: relative; display: flex; justify-content: space-between; align-items: center; gap: 24px; padding: 21px 34px 21px 0; color: var(--ink); font-family: var(--serif); font-size: 19px; font-weight: 600; cursor: pointer; list-style: none; }
+.faq-list summary::-webkit-details-marker { display: none; }
+.faq-list summary::after { content: "+"; position: absolute; right: 4px; top: 50%; transform: translateY(-50%); font-family: var(--sans); font-size: 22px; font-weight: 400; }
+.faq-list details[open] summary::after { content: "−"; }
+.faq-list details p { max-width: 780px; margin: 0; padding: 0 36px 21px 0; color: #6e675f; font-size: 12px; line-height: 1.8; }
+.faq-list a { color: var(--ink); font-weight: 700; text-decoration: underline; }
+@media (max-width: 680px) {
+  .faq-list summary { padding: 17px 30px 17px 0; font-size: 17px; }
+  .faq-list details p { padding-right: 16px; font-size: 11px; }
+  .service-card > strong small { font-size: 8px; }
+}
