@@ -382,3 +382,14 @@ h1 em, h2 em { color: var(--gold); font-weight: 500; }
   .product-card-copy p { font-size: 10px; }
 }
 @media (max-width: 390px) { .product-grid { grid-template-columns: 1fr; } }
+
+/* Service booking guidance */
+.service-help { margin-top: 28px; padding: 24px 26px; display: flex; align-items: center; justify-content: space-between; gap: 24px; border: 1px solid #ded8ce; background: #f4f0e9; }
+.service-help .eyebrow { margin-bottom: 9px; color: #756f67; font-size: 8px; }
+.service-help h3 { margin: 0 0 6px; font-family: var(--serif); font-size: 23px; font-weight: 600; }
+.service-help > div > p:last-child { margin: 0; color: #6e675f; font-size: 11px; line-height: 1.65; }
+.service-help .text-link { flex: 0 0 auto; }
+@media (max-width: 680px) {
+  .service-help { align-items: flex-start; flex-direction: column; gap: 16px; padding: 21px; }
+  .service-help h3 { font-size: 21px; }
+}
