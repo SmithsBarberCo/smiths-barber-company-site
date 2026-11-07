@@ -66,7 +66,7 @@ h1 em, h2 em { color: var(--gold); font-weight: 500; }
 .hero-note strong { font-size: 11px; letter-spacing: .08em; }
 .hero-note small { margin-top: 4px; color: var(--muted); font-size: 10px; }
 .hero-visual { min-width: 0; position: relative; justify-self: end; width: min(100%, 540px); z-index: 1; }
-.hero-photo-wrap { height: min(56vw, 475px); min-height: 330px; position: relative; border: 1px solid rgba(201, 169, 106, .55); padding: 12px; }
+.hero-photo-wrap { height: auto; aspect-ratio: 1.46; min-height: 0; position: relative; border: 1px solid rgba(201, 169, 106, .55); padding: 12px; }
 .hero-photo-wrap::before { content: ""; position: absolute; inset: 12px; background: linear-gradient(180deg, rgba(20, 18, 17, .02) 35%, rgba(20, 18, 17, .72) 100%); z-index: 1; pointer-events: none; }
 .hero-photo { width: 100%; height: 100%; object-fit: cover; filter: saturate(.78) contrast(1.02); background: #383431; }
 .photo-caption { position: absolute; z-index: 2; bottom: 30px; left: 29px; right: 29px; display: flex; justify-content: space-between; color: white; font-size: 8px; font-weight: 700; letter-spacing: .19em; }
@@ -154,7 +154,7 @@ h1 em, h2 em { color: var(--gold); font-weight: 500; }
   .site-header { height: 72px; padding-inline: 25px; }
   .hero { min-height: auto; padding: 74px 48px 76px; grid-template-columns: 1fr 1fr; gap: 30px; }
   .hero h1 { font-size: clamp(55px, 8vw, 78px); }
-  .hero-photo-wrap { min-height: 310px; height: 48vw; }
+  .hero-photo-wrap { height: auto; aspect-ratio: 1.46; min-height: 0; }
   .hero-stamp { width: 90px; height: 90px; right: -20px; top: -24px; font-size: 7px; }
   .section { padding: 82px 48px; }
   .about-copy { padding-inline: 48px; }
@@ -184,7 +184,7 @@ h1 em, h2 em { color: var(--gold); font-weight: 500; }
   .hero-actions .button { width: 100%; }
   .hero-note { margin-top: 29px; }
   .hero-visual { width: calc(100% - 11px); margin-right: 11px; align-self: center; }
-  .hero-photo-wrap { height: 68vw; min-height: 260px; max-height: 390px; padding: 8px; }
+  .hero-photo-wrap { height: auto; aspect-ratio: 1.46; min-height: 0; padding: 8px; }
   .hero-photo-wrap::before { inset: 8px; }
   .photo-caption { bottom: 20px; left: 19px; right: 19px; font-size: 7px; }
   .hero-stamp { width: 80px; height: 80px; right: -24px; top: -20px; }
