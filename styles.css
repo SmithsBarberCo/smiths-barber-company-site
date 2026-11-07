@@ -347,3 +347,16 @@ h1 em, h2 em { color: var(--gold); font-weight: 500; }
   .faq-list details p { padding-right: 16px; font-size: 11px; }
   .service-card > strong small { font-size: 8px; }
 }
+
+
+/* Crazy Bull styling products */
+.products { background: #f4f0e9; }
+.products .section-heading { align-items: center; }
+.products .section-heading h2 em { color: var(--gold); }
+.product-copy { max-width: 430px; }
+.product-copy p { color: #6e675f; font-size: 13px; line-height: 1.8; margin: 0 0 15px; }
+.product-copy .text-link { display: inline-flex; margin-top: 6px; color: var(--ink); }
+.product-copy .text-link span { margin-left: 8px; }
+@media (max-width: 680px) {
+  .product-copy p { font-size: 12px; }
+}
