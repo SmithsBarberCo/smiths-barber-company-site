@@ -393,3 +393,22 @@ h1 em, h2 em { color: var(--gold); font-weight: 500; }
   .service-help { align-items: flex-start; flex-direction: column; gap: 16px; padding: 21px; }
   .service-help h3 { font-size: 21px; }
 }
+
+/* Analytics consent notice */
+.analytics-consent[hidden] { display: none !important; }
+.analytics-consent { position: fixed; z-index: 100; left: 18px; right: 18px; bottom: 18px; max-width: 980px; margin: 0 auto; padding: 24px; display: grid; grid-template-columns: minmax(0, 1fr) auto; align-items: center; gap: 24px; border: 1px solid var(--gold); background: var(--cream); color: var(--ink); box-shadow: 0 12px 40px rgba(0, 0, 0, .28); }
+.analytics-consent-copy .eyebrow { margin-bottom: 8px; color: #756f67; font-size: 8px; }
+.analytics-consent-copy h2 { margin: 0 0 8px; font-family: var(--serif); font-size: 25px; font-weight: 600; letter-spacing: -.02em; }
+.analytics-consent-copy > p:last-child { max-width: 690px; margin: 0; color: #5e5851; font-size: 11px; line-height: 1.65; }
+.analytics-consent-copy a { text-decoration: underline; }
+.analytics-consent-actions { display: flex; flex-wrap: wrap; justify-content: flex-end; gap: 9px; }
+.analytics-consent-actions button { min-height: 42px; padding: 0 14px; border: 1px solid var(--ink); background: transparent; color: var(--ink); font-size: 9px; font-weight: 700; letter-spacing: .06em; text-transform: uppercase; cursor: pointer; }
+.analytics-consent-actions .analytics-consent-accept { background: var(--ink); color: var(--cream); }
+.analytics-consent-actions button:hover { outline: 2px solid var(--gold); outline-offset: 2px; }
+.analytics-consent-actions button:focus-visible, .cookie-settings-link:focus-visible { outline: 2px solid var(--booksy); outline-offset: 3px; }
+.cookie-settings-link { padding: 0; border: 0; background: transparent; color: inherit; font: inherit; text-decoration: underline; cursor: pointer; }
+@media (max-width: 680px) {
+  .analytics-consent { left: 10px; right: 10px; bottom: 10px; padding: 18px; grid-template-columns: 1fr; gap: 16px; }
+  .analytics-consent-actions { justify-content: stretch; }
+  .analytics-consent-actions button { flex: 1 1 130px; }
+}
