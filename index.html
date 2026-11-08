@@ -311,8 +311,68 @@
       <p>Good cuts. Good people. Duston, Northampton.<br><a class="footer-phone" href="tel:+441604756333">01604 756333</a></p>
       <a class="footer-instagram" href="https://www.instagram.com/smithsbarberco/" target="_blank" rel="noopener" aria-label="Follow Smith’s Barber Company on Instagram"><img class="instagram-icon" src="/instagram-icon.png" alt=""><span>Follow us on Instagram</span></a>
       <a class="footer-book footer-booksy" href="https://booksy.com/en-gb/26266_smith-s-barber-company-ltd_barber_113619_northampton" target="_blank" rel="noopener"><img class="booksy-logo" src="/booksy-logo.svg" alt="">Book on Booksy <span aria-hidden="true">↗</span></a>
-      <small class="copyright">© <span id="year">2026</span> Smith’s Barber Company Ltd</small>
+      <small class="copyright">© <span id="year">2026</span> Smith’s Barber Company Ltd · <button type="button" class="cookie-settings-link" id="open-analytics-settings">Cookie settings</button></small>
     </footer>
     <script src="script.js" defer></script>
+      <section class="analytics-consent" id="analytics-consent-banner" role="dialog" aria-labelledby="analytics-consent-title" aria-describedby="analytics-consent-copy" hidden>
+      <div class="analytics-consent-copy">
+        <p class="eyebrow">PRIVACY CHOICES</p>
+        <h2 id="analytics-consent-title">Analytics cookies</h2>
+        <p id="analytics-consent-copy">We use Google Analytics 4 to understand how people use this website. If you accept, it uses cookies to record pages visited, how you arrived, and device and browser details, then shares this usage data with Google. Analytics stays off until you accept. You can reject it or change your choice any time in Cookie settings. <a href="https://policies.google.com/privacy" target="_blank" rel="noopener">Google Privacy Policy</a>.</p>
+      </div>
+      <div class="analytics-consent-actions">
+        <button type="button" class="analytics-consent-reject" id="analytics-reject">Reject analytics</button>
+        <button type="button" class="analytics-consent-accept" id="analytics-accept">Accept analytics</button>
+      </div>
+    </section>
+    <script>
+      (() => {
+        const measurementId = 'G-QVMD3XRZPB';
+        const storageKey = 'sbc-analytics-consent-v1';
+        const banner = document.getElementById('analytics-consent-banner');
+        const acceptButton = document.getElementById('analytics-accept');
+        const rejectButton = document.getElementById('analytics-reject');
+        const settingsButton = document.getElementById('open-analytics-settings');
+        if (!banner || !acceptButton || !rejectButton || !settingsButton) return;
+
+        function loadAnalytics() {
+          if (window.sbcAnalyticsLoaded) return;
+          window.sbcAnalyticsLoaded = true;
+          window.dataLayer = window.dataLayer || [];
+          function gtag() { window.dataLayer.push(arguments); }
+          window.gtag = window.gtag || gtag;
+          window.gtag('js', new Date());
+          window.gtag('config', measurementId, { allow_google_signals: false });
+          const tag = document.createElement('script');
+          tag.async = true;
+          tag.src = 'https://www.googletagmanager.com/gtag/js?id=' + measurementId;
+          document.head.appendChild(tag);
+        }
+
+        function saveChoice(choice) {
+          localStorage.setItem(storageKey, choice);
+          banner.hidden = true;
+          if (choice === 'accepted') {
+            window['ga-disable-' + measurementId] = false;
+            if (window.gtag) window.gtag('consent', 'update', { analytics_storage: 'granted' });
+            loadAnalytics();
+          } else {
+            window['ga-disable-' + measurementId] = true;
+            if (window.gtag) window.gtag('consent', 'update', { analytics_storage: 'denied' });
+          }
+        }
+
+        const savedChoice = localStorage.getItem(storageKey);
+        if (savedChoice === 'accepted') loadAnalytics();
+        else if (savedChoice !== 'rejected') banner.hidden = false;
+
+        acceptButton.addEventListener('click', () => saveChoice('accepted'));
+        rejectButton.addEventListener('click', () => saveChoice('rejected'));
+        settingsButton.addEventListener('click', () => {
+          banner.hidden = false;
+          acceptButton.focus();
+        });
+      })();
+    </script>
   </body>
 </html>
